@@ -8,7 +8,7 @@
 https://dumps.wikimedia.org/zhwiki/ ;
 https://dumps.wikimedia.org/enwiki/ ;
 https://dumps.wikimedia.org/thwiki/ 
-下载离线语料。
+下载不同语种的离线语料。
 如下载中文语料:
 ```shell
 wget https://dumps.wikimedia.org/zhwiki/20151123/zhwiki-20151123-pages-articles-multistream.xml.bz2
