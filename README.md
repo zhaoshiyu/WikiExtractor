@@ -5,12 +5,25 @@
 ## 二、使用方法
 ### 1、维基百科语料获取
 从
-https://dumps.wikimedia.org/zhwiki/
-https://dumps.wikimedia.org/enwiki/
-https://dumps.wikimedia.org/thwiki/
+https://dumps.wikimedia.org/zhwiki/ ;
+https://dumps.wikimedia.org/enwiki/ ;
+https://dumps.wikimedia.org/thwiki/ 
 下载离线语料。
-如下载中文语料
+如下载中文语料:
 ```shell
 wget https://dumps.wikimedia.org/zhwiki/20151123/zhwiki-20151123-pages-articles-multistream.xml.bz2
 ```
+这个压缩包里面存的是标题、正文部分，如果需要其他数据，如页面跳转、历史编辑记录等，可以到目录下找别的下载链接。
 
+### 2、使用 WikiExtractor 抽取正文文本
+下载完成后使用下列命令抽取：
+```shell
+bzcat zhwiki-20151123-pages-articles-multistream.xml.bz2 | python WikiExtractor-zsy.py -b200M -o extracted > vocabulary.txt
+```
+参数 -b200M 表示以200M为单位切分文件，默认是 500K。
+
+### 3、
+如果抽取中文的话需要将繁体转化为简体
+```shell
+opencc -i wiki_00 -o wiki_00_chs -c zht2zhs.ini
+```
