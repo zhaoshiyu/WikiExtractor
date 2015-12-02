@@ -29,6 +29,7 @@ bzcat zhwiki-20151123-pages-articles-multistream.xml.bz2 | python WikiExtractor-
 ```shell
 sudo apt-get install opencc
 ```
+或者查看[这里](https://code.google.com/p/opencc/wiki/Install)
 安装完成后使用下列命令转换：
 ```shell
 opencc -i wiki_00 -o wiki_00_chs -c zht2zhs.ini
