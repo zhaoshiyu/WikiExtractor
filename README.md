@@ -22,8 +22,14 @@ bzcat zhwiki-20151123-pages-articles-multistream.xml.bz2 | python WikiExtractor-
 ```
 参数 -b200M 表示以200M为单位切分文件，默认是 500K。
 
-### 3、
-如果抽取中文的话需要将繁体转化为简体
+### 3、繁简转换
+如果抽取中文的话需要将繁体转化为简体(维基百科的中文数据是繁简混杂的，里面包含大陆简体、台湾繁体、港澳繁体等多种不同的数据)。可以使用opencc进行转换，也可以使用其它繁简转换工具。
+
+若使用opencc，ubuntu系统使用下列命令安装：
+```shell
+sudo apt-get install opencc
+```
+安装完成后使用下列命令转换：
 ```shell
 opencc -i wiki_00 -o wiki_00_chs -c zht2zhs.ini
 ```
