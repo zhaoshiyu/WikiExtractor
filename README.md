@@ -1,6 +1,6 @@
 # WikiExtractor 维基百科离线语料获取
 ## 一、介绍
-意大利人用python写的维基百科离线语料抽取工具[WikiExtractor](http://medialab.di.unipi.it/wiki/Wikipedia_Extractor)；这里加了去掉几个特殊字符。
+意大利人用python写的维基百科离线语料抽取工具[WikiExtractor](http://medialab.di.unipi.it/wiki/Wikipedia_Extractor)、[GitHub](https://github.com/attardi/wikiextractor)；这里加了去掉几个特殊字符。
 
 ## 二、使用方法
 ### 1、维基百科语料获取
